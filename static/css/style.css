@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap');
+:root{
+  --roboto: 'Roboto', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+  --regular: 400;
+  --azul-fondo: #E4F5F5;
+  --azul-nav: #015366;
+  --azul-footer: #033540;
+  --negrita: 700;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+    font-family: var(--roboto); /*La de respaldo /local*/
+    font-weight: var(--regular);
+    font-size: 62.5%; /*El navegador por df son 16 px; Al poner el porcentaje, se queda en 10 pixeles 16*0.625=10px*/ 
+    height: 100%;
+}
+p{
+  font-family: var(--roboto);
+  font-weight: var(--regular);
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+main{
+  margin: 15px;
+}
+li, p, .titulo{
+  color: black;
+}
+
+body{
+  display: flex;
+  width: 100%;
+  /* min-width: 702px; */
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--azul-fondo);
+}
+
+.titulo{
+  font-family: var(--montserrat);
+  font-weight: var(--negrita);
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+/* Estos son los estilos del header */
+
+
+/* Estos son los estilos del footer */
+footer{
+  border-top: 5px solid #319CFF;
+  width: 100%;
+  max-width: 100%;
+  min-width: fit-content;
+  padding: 15px 20px;
+  background: #033540;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.sociales{
+  display: flex;
+  column-gap: 24px;   
+}
+
+
+.face-content{
+  width: 30px;
+  height: 30px;
+}
+.face__content--img{
+  width: 100%;
+  height: 100%;
+}
+
+.copy{
+  width: 100%;
+  height: 100%;
+}
+
+.cpy-content a{
+  color: white;
+  text-decoration: none;
+  font-size: 2.2rem;
+  
+
+}
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-content a{
+  position: relative;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+  color: #edededee;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+
+}
+
+
+.carrusel__img{
+  vertical-align: middle;
+  width: 100%;
+ /* height: 50rem;*/
+  height: 100%;
+  object-fit:  fill;
+}

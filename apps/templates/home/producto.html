@@ -1,0 +1,39 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href={%static 'css/style.css'%}>
+<link rel="stylesheet" href= {%static 'css/producto.css'%}>
+{% endblock stylesheet %}
+{% block content %}
+
+<div class="container-material">
+  <div class="container-grid">
+    <div class="item-title">
+      <h1>{{producto.nombre}}</h1>
+    </div>
+    <div class="item-img">
+      <img class="img-material" src={{producto.imagen.url}} alt="">
+    </div>
+    <div class="item-contenido">
+      <div class="parrafo">
+        <p class="p-desc">{{producto.descripcion | safe}} </p>    
+        <p class="p-piezas">Piezas disponlibles: {{producto.stock}}</p>
+        <p class="p-precio">$ {{producto.precio}} MX C/U</p>
+      </div>      
+    </div>
+    <div class="item-boton">
+      <div class="boton-regresar">
+        <a class="inicio" href={% url 'materiales' %} target="_self">
+          <button>
+            <span class="label">Regresar</span>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

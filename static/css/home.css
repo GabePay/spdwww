@@ -1,0 +1,64 @@
+.carousel{
+  margin-top: 10rem;
+}
+
+.contenedor__estudiar{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   background-color: white;
+   column-gap: 3p;
+   padding: 2rem;
+   margin: 5rem 0;
+ }
+
+ .estudiar__porque{
+   width: 100%;
+   align-items: center;
+ }
+
+ .estudiar__porque ul{
+   width: 90%;
+ }
+
+ .estudiar__img{
+   width: 100%;
+   text-align: center;
+ }
+
+ .estudiar__img img{
+  width: 80%;
+  object-fit: cover;
+  
+ }
+ 
+li{
+   font-family: var(--roboto);
+   font-weight: var(--regular);
+   font-size: 1.6rem;
+   text-align: justify;
+   margin-top: 2rem;
+ }
+ 
+main{
+   margin: 0px !important;
+}
+
+.contenedor__estudiar {
+  display: grid; 
+  grid-template-areas: 
+    "estudiar__porque estudiar__img"; 
+}
+
+.estudiar__porque { grid-area: estudiar__porque;}
+.estudiar__img { grid-area: estudiar__img;}
+
+
+@media (max-width: 915px){
+  .contenedor__estudiar{
+    flex-direction: column;
+    grid-template-areas: 
+    "estudiar__porque"
+    "estudiar__img"; 
+  }
+}

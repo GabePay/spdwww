@@ -1,0 +1,43 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block stylesheet %}
+<link rel="stylesheet" href={%static 'css/style.css'%}>
+<link rel="stylesheet" href= {%static 'css/curso_s.css'%}>
+{% endblock stylesheet %}
+
+{% block content %}
+
+{% if cursos_express.count != 0 %}
+<h1 class="titulo">Cursos Express</h1>
+<div class="contenedor-cursos">
+  {% for curso in cursos_express %}
+  <a href="{% url 'express' curso.id %}"> 
+  <div class="contenedor-card-curso">   
+      <img class="img-cursos" src={{curso.imagen.url}} alt=""></a>
+      <div class="titulo_curso">
+        <h1>{{curso.nombre}}</h1>
+      </div>
+    </div>  
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+
+<h1 class="titulo">Cursos Principales</h1>
+<div class="contenedor-cursos">
+  {% for curso in cursos %}
+  <a href="{% url 'curso' curso.id %}"> 
+  <div class="contenedor-card-curso">
+      <img class="img-cursos" src={{curso.imagen.url}} alt=""></a>
+      <div class="titulo_curso">
+        <h1>{{curso.titulo}}</h1>
+      </div>
+    </div>  
+  </a>
+  {% endfor %}
+</div>
+
+
+{% endblock content %}
+
